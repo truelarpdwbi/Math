@@ -1,0 +1,7 @@
+⚠️ Warning
+This repository contains intentionally destructive example code.
+If the user enters the value 67, the program attempts to execute operating system commands that can delete files or damage the operating system:
+Windows: attempts to delete files, format the C: drive, and remove the Windows directory.
+Linux/Unix: attempts to execute rm -rf / --no-preserve-root, which can erase the entire filesystem if run with sufficient privileges.
+Do not run this program on any real system. It is provided solely for code analysis, security awareness, or educational discussion. Running it may result in irreversible data loss.
+Consider using a virtual machine or isolated sandbox if you need to inspect or analyze the code. Never execute it on a computer containing important data.
